@@ -1,0 +1,125 @@
+.card{
+  width: 25rem;
+  height: 36rem;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+
+  &-side{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: all 0.8s;
+    transform-style:preserve-3d ;
+
+    &-front,&-back{
+      position: absolute;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      height: 100%;
+      width: 100%;
+    }
+
+    &-front{
+      background-color: rgb(238, 217, 217);
+
+      &-background{
+        background-size: cover;
+        height: 17rem;
+        clip-path: polygon(0 0,100% 0,100% 88%,0 100%);
+
+        &--1{
+          background-image: linear-gradient(to right bottom , #84898b93 , #5f62648c ), url(../img/silver.jpg);
+        }
+        &--2{
+          background-image: linear-gradient(to right bottom , #f6b3159b , #997000b0 ), url(../img/gold.jpg);
+        }
+        &--3{
+          background-image: linear-gradient(to right bottom , #dc000088 , #6b00009a ), url(../img/ruby.jpg);
+        }
+      }
+
+      &-heading{
+        
+        font-size: 2rem;
+        display: inline-block;
+        position: absolute;
+        right: 1rem;
+        top: 12rem;
+        padding: 3px 8px;
+
+        &--1{
+          background-image: linear-gradient(to right bottom , #84898bf6 , #5f6264f8);
+        }
+
+        &--2{
+          background-image: linear-gradient(to right bottom , #f3b933e7 , #b58e24f5 )
+        }
+
+        &--3{
+          background-image: linear-gradient(to right bottom , #DC0000 , #6B0000 )
+        }
+
+      }  
+        
+      &-text{
+       padding: 2rem;
+       width: 80%;
+       margin: 0 auto;
+       
+
+        ul{
+         list-style: none;
+         margin-top: 1.6rem;
+         
+          li{
+            font-size: 1.5rem;
+            text-align: center;
+
+            &:not(:last-child){
+              border-bottom: 1px solid  rgb(195, 183, 183);
+            }
+          }
+        }
+      }  
+    }
+
+    &-back{
+      transform: rotateY(180deg);
+      
+      
+
+      &--1{
+          background-image: linear-gradient(to right bottom , #84898bf6 , #5f6264f8);
+      }
+  
+      &--2{
+          background-image: linear-gradient(to right bottom , #f3b933e7 , #b58e24f5 )
+      }
+  
+      &--3{
+          background-image: linear-gradient(to right bottom , #DC0000 , #6B0000 )
+      }
+
+      &-price{
+      font-size:5rem ;
+      position: absolute;
+      top:10rem;
+      left: 8rem;
+      color: whitesmoke;
+      }
+
+      &-tag{
+        font-size: 1.7rem;
+        color: whitesmoke;
+        position: absolute;
+        top: 18rem;
+        left: 11rem;
+      }
+    }     
+  }
+
+  &:hover &-side{
+    transform: rotateY(180deg);
+  }
+  
+}

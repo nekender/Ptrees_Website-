@@ -1,0 +1,88 @@
+.primary_heading{
+    text-align: center;
+    text-transform: uppercase;
+    color:#eee;
+    letter-spacing: 6px;
+    display: block;
+    transition: all .2s;
+    backface-visibility: hidden;
+    
+    
+    &--main{
+      
+        font-size: 5rem;
+        animation-name: MoveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+    }
+
+    &--sub{
+
+        font-size: 3rem;
+        animation: MoveInLeft 1s ease-out;
+    }
+}
+
+
+.secondary_heading{
+
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+    
+    
+    &--about{
+
+    padding: 6rem;
+    color:#682B03;
+
+    }
+
+    &--donation{
+
+        margin: 8rem auto;
+        color:#682B03;
+    }
+
+
+    &--reviews{
+        padding: 6rem;
+        font-size: 5rem;
+        text-align: center;
+        margin-top: 8rem;
+        margin-bottom: 2rem;
+        color:#682B03
+    }
+
+}
+
+.tertiary_heading{
+
+    text-transform: uppercase;
+    font-size: 5rem;
+    &--about{
+        color:#682B03;
+    }
+    
+
+}
+
+.plain_text{
+
+    font-size: 1.5rem;
+    
+
+    
+}
+
+.features_heading{
+
+    &--main{
+        font-size: 2rem;
+    }
+
+    &--sub{
+        font-size: 1.6rem;
+    }
+}
